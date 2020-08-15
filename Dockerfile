@@ -1,4 +1,5 @@
 FROM tiangolo/nginx-rtmp
 
-COPY conf/*.conf /etc/nginx/
+ADD conf/ /etc/nginx/
+VOLUME /etc/nginx/dynamic
 COPY hls/*.html hls/*.js hls/*.m3u8 /srv/
